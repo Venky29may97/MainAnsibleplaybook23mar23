@@ -2,12 +2,11 @@
 - hosts: 172.31.17.62
   become: yes
   tasks:
-  - name: i want to create mytest file
-    file:
-      path:  /home/ubuntu/mytestfile
-      state: touch
-
-  - name: i want to install webserver
+  - include: myfile.yml
+  - name: install webserver
     apt:
-      name: apache2
-      state: present
+     name: apache2
+  - name: copy index file into node side
+    copy:
+     src: myindexpage
+     dest:  /var/www/html/index.html   
