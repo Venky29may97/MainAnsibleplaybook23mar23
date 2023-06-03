@@ -1,2 +1,12 @@
 ---
 # tasks file for mytomcatrole
+- inculde_tasks: myuser.yml
+- inculde_tasks: installjava.yml
+- inculde_tasks: downloadtomcat.yml
+- inculde_tasks: permissions.yml
+- inculde_tasks: tomcatDashboard.yml
+- inculde_tasks: tomservice.yml
+- inculde_tasks: tomstart.yml
+
+
+
